@@ -93,10 +93,53 @@ public class Controller implements IController {
         return dbController.updateTherapy(therapy);
     }
 
-    
+    @Override
+    public void deletePatient(int patient_id) {
+        dbController.deletePatient(patient_id);
+    }
+
+    @Override
+    public void deleteAllPatients() {
+        dbController.deleteAllPatients();
+    }
+
+    @Override
+    public void deleteAllTherapies() {
+        dbController.deleteAllTherapies();
+    }
+
+    @Override
+    public void deleteAllTherapyFromPatient(int patient_id) {
+        dbController.deleteAllTherapyFromPatient(patient_id);
+    }
+
+    @Override
+    public void deleteTherapyFromPatient(int patient_id, int therapy_id) {
+        dbController.deleteTherapyFromPatient(patient_id, therapy_id);
+    }
+
+    @Override
+    public int getCountPatient() {
+        return dbController.getCountPatient();
+    }
+
+    @Override
+    public int getCountTherapy() {
+        return dbController.getCountTherapy();
+    }
+
+    @Override
+    public Map<Integer, String> getPatientTherapy(int patient_id) {
+        return dbController.getPatientTherapy(patient_id);
+    }
 
     @Override
     public Map<Integer, Integer> getUniqPatTherapy(int patient_id) {
         return dbController.getUniqPatTherapy(patient_id);
+    }
+
+    @Override
+    public Map<Integer, Integer> getUniqPatTherapy2(int patient_id) {
+        return dbController.getUniqPatTherapy2(patient_id);
     }
 }

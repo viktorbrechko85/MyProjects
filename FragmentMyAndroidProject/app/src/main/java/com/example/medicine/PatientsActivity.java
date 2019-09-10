@@ -1,4 +1,4 @@
-﻿package com.example.medicine;
+package com.example.medicine;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentActivity;
@@ -90,6 +90,28 @@ public class PatientsActivity extends AppCompatActivity /*implements LoaderManag
                 break;
         }
     }*/
-   
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.d(TAG, "MainActivity: onResume()");
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Log.d(TAG, "MainActivity: onPause()");
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Log.d(TAG, "MainActivity: onStop()");
+    }
+
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.d(TAG, "MainActivity: onStop()");
+        // закрываем подключение при выходе
+    }
 
 }
